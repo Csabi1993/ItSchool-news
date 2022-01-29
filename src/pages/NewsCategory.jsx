@@ -30,9 +30,13 @@ function NewsCategory() {
     case "football":
       title = "Fotbal";
       break;
-    // Adauagam titilul pentru ruta /fashion.
+    // Adauagam titlul pentru ruta /fashion.
     case "fashion":
       title = "Fashion";
+      break;
+    // Adaugam titlul pentru ruta business.
+    case "business":
+      title = "Business";
       break;
     default:
       break;

@@ -17,7 +17,7 @@ function Favorites() {
     favoritesState
   );
   // Adaugarea in localStorage este un efect, atunci cand se modifica produsele favorite.
-  // Cum strim ca s-au modificat produsele favorite? Primim o noua valoare a lui favoritesState.
+  // Cum stim ca s-au modificat produsele favorite? Primim o noua valoare a lui favoritesState.
   // setLocalStorageState este sugerat sa fie adaugat la dependente de o regula de lining.
   useEffect(() => {
     setLocalStorageState(favoritesState);

@@ -12,15 +12,21 @@ function Home() {
   const footballNewsEndpoint = getNewsCategoriesEndpoint("football", 1, 6);
   // Generam endpoint-ul categoriei fashion.
   const fashionNewsEndpoint = getNewsCategoriesEndpoint("fashion", 1, 6);
+  // Generam endpoint-ul categoriei business.
+  const businessNewsEndpoint = getNewsCategoriesEndpoint("business", 1, 6);
   let technologyData = useFetch(technologyNewsEndpoint);
   let footballData = useFetch(footballNewsEndpoint);
   // Fetch-uim datele categoriei fashion.
   let fashionData = useFetch(fashionNewsEndpoint);
+  // Fetch-uim datele categoriei business.
+  let businessData = useFetch(businessNewsEndpoint);
 
   const adaptedTechnologyData = getNewsList(technologyData);
   const adaptedFootballData = getNewsList(footballData);
   // Adaptam datele categoriei fashion.
   const adaptedFashionData = getNewsList(fashionData);
+  // Adaptam datele categoriei business.
+  const adaptedBusinessData = getNewsList(businessData);
 
   return (
     <Layout>
@@ -59,6 +65,20 @@ function Home() {
             Vezi toate știrile legate de fashion în secțiunea{" "}
             <Link to="/category/fashion" className="text-secondary">
               Fashion
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
+      {/* Adaugam sectiunea ce afiseaza stirile despre business */}
+      <section className="business my-5">
+        <Container>
+          <h1 className="mb-5 pt-3">Business</h1>
+          <NewsCardList newsList={adaptedBusinessData} />
+          <p>
+            Vezi toate știrile legate de business în secțiunea{" "}
+            <Link to="/category/business" className="text-secondary">
+              Business
             </Link>
             .
           </p>
